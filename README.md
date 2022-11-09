@@ -2,6 +2,10 @@
 
 This is a template that can be used by developers to integrate Laravel with the new Cruip Mosaic dashboard layout.
 
+## Image
+![Alt text](/mosaic/img/template.png?raw=true)
+
+
 ## Setup
 
 1. Install Laravel via composer
