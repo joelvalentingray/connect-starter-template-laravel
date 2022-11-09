@@ -77,3 +77,4 @@ register as user with url "http://localhost:8003/register"
 * This HTML template is shipped with the (Tailwind CLI tool)[https://tailwindcss.com/docs/installation].
 * View full template at [https://preview.cruip.com/mosaic/index.html]
 * Template source code [https://github.com/gray-television/mosaic-template-html]
+* Icons used by template [https://tablericons.com/]
