@@ -1,6 +1,6 @@
-# laravel-mosaic-html-template
+# connect-starter-template-laravel
 
-This is a template that can be used by developers to integrate Laravel with the new Cruip Mosaic dashboard layout.
+This is a template that can be used by developers to integrate Template with the new laravel project.
 
 ## Image
 ![Alt text](/mosaic/img/template.png?raw=true)
