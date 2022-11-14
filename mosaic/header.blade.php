@@ -23,7 +23,7 @@
             <div class="flex items-center space-x-3">
                 <div class="w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-slate-200 transition duration-150 rounded-full" x-data="{ searchOpen: false }">
                     <span class="sr-only">Search</span>
-                    <a target="_blank" href={{route('telescope')}}>
+                    <a target="_blank" href={{ route('telescope') }}>
                         <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
                             <path class="fill-current text-slate-700" d="M4.418 19.612A9.092 9.092 0 0 1 2.59 17.03L.475 19.14c-.848.85-.536 2.395.743 3.673a4.413 4.413 0 0 0 1.677 1.082c.253.086.519.131.787.135.45.011.886-.16 1.208-.474L7 21.44a8.962 8.962 0 0 1-2.582-1.828Z"></path>
                             <path class="fill-current text-slate-600" d="M10.034 13.997a11.011 11.011 0 0 1-2.551-3.862L4.595 13.02a2.513 2.513 0 0 0-.4 2.645 6.668 6.668 0 0 0 1.64 2.532 5.525 5.525 0 0 0 3.643 1.824 2.1 2.1 0 0 0 1.534-.587l2.883-2.882a11.156 11.156 0 0 1-3.861-2.556Z"></path>
@@ -41,7 +41,7 @@
                         @click.prevent="open = !open"
                         :aria-expanded="open">
                         <div class="flex items-center truncate">
-                            <span class="truncate ml-2 text-sm font-medium group-hover:text-slate-800">User</span>
+                            <span class="truncate ml-2 text-sm font-medium group-hover:text-slate-800">{{ Request::get('user')['firstName'] }}</span>
                             <svg class="w-3 h-3 shrink-0 ml-1 fill-current text-slate-400" viewBox="0 0 12 12">
                                 <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
                             </svg>
@@ -60,15 +60,12 @@
                         x-transition:leave-end="opacity-0"
                         x-cloak>
                         <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200">
-                            <div class="font-medium text-slate-800">User</div>
-                            <div class="text-xs text-slate-500 italic">Developer</div>
+                           <div class="font-medium text-slate-800">{{ Request::get('user')['firstName'] . ' ' . Request::get('user')['lastName'] }}</div>
+                           <div class="text-xs text-slate-500 italic">{{ Request::get('user')['station'] }}</div>
                         </div>
                         <ul>
-                            <li>
-                                <a class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3" href="javascript:{}" onclick="document.getElementById('logoutForm').submit();" @click="open = false" @focus="open = true" @focusout="open = false">Sign Out</a>
-                                <form id="logoutForm" method="POST" action="{{ route('logout') }}" style="display: none">
-                                    @csrf
-                                </form>
+                           <li>
+                                <a class="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3" href="{{ route('logout')}}">Sign Out</a>
                             </li>
                         </ul>
                     </div>
