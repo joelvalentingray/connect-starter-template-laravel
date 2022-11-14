@@ -1,6 +1,6 @@
 # connect-starter-template-laravel
 
-This is a template that can be used by developers to integrate Template with the new laravel project.
+This is a template that can be used by developers to integrate a laravel project with new dashboard.
 
 ## Image
 ![Alt text](/mosaic/img/template.png?raw=true)
@@ -31,23 +31,18 @@ DB_CONNECTION=sqlite
 to .env
 php artisan migrate
 
-3. Install laravel Telescope and Laravel Breeze packages
+3. Install laravel Telescope
 ```
-TELESCOPE
 composer require laravel/telescope
 php artisan telescope:install
 php artisan migrate
 
-BREEZE
-composer require laravel/breeze:1.9.2
-php artisan breeze:install
-npm install
-npm run dev
-php artisan migrate
-
 ```
 
-4. Add installtion files to integrate template with laravel
+4. Add SSO login to laravel project
+[https://github.com/gray-television/laravel-package-g-authentication].
+
+5. Add installtion files to integrate template with laravel
 
 ```
 Replace tailwind.config.js in root(/) with template verison
@@ -66,11 +61,9 @@ Add index.blade.php file to resources/views directory
 
 Add header.blade.php, sidebar.blade.php, and banner.blade.php to resources/views/components directory
 
-Update "return view('dashboard');" to "return view('index');" in routes/web.php to view new dashboard when logged in
+Add web.php to routes(root) directory
 
 run "npm run dev"
-
-register as user with url "http://localhost:8003/register"
 
 ```
 ## Notes
