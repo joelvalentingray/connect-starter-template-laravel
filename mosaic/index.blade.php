@@ -7,7 +7,7 @@
             <!-- WELCOME BANNER -->
             <div class="relative bg-gray-200  p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
                 <div class="relative">
-                    <h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-1 ">Hello, Admin. 👋</h1>
+                    <h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-1 ">Hello, {{ Request::get('user')['firstName'] . ' ' . Request::get('user')['lastName'] }} 👋</h1>
                     <p>Welcome to your new project.</p>
                 </div>
             </div>
