@@ -25,7 +25,7 @@ function sweetAlertDelete (id, route){
                 'Your distributor has been deleted.',
                 'success'
             )
-            setInterval('autoRefreshPage()', 2000);
+            setInterval('autoRefreshPage()', 1000);
         }
     })
 }
@@ -49,7 +49,7 @@ function sweetAlertFailedJobs (route){
                 })
                 .then((response) => {})
                 .catch((err) => {});
-            setInterval('autoRefreshPage()', 100);
+            setInterval('autoRefreshPage()', 1000);
         }
     })
 }
