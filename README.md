@@ -31,6 +31,10 @@ php artisan migrate
 ```
 
 ##### 3.Replace package.json file in root directory of project
+```
+npm install 
+npm run dev
+```
 
 ##### 4. Add SSO login to laravel project
 [https://github.com/gray-television/laravel-package-g-authentication].
