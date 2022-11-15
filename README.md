@@ -14,7 +14,6 @@ open terminal
 cd Desktop
 composer create-project laravel/laravel:^8.0 example-app
 cd example-app
-php artisan serve
 
 ```
 
@@ -31,7 +30,10 @@ DB_CONNECTION=sqlite
 to .env
 php artisan migrate
 
-3. Install laravel Telescope
+3. Add SSO login to laravel project
+[https://github.com/gray-television/laravel-package-g-authentication].
+
+4. Install laravel Telescope
 ```
 composer require laravel/telescope
 php artisan telescope:install
@@ -39,10 +41,28 @@ php artisan migrate
 
 ```
 
-4. Add SSO login to laravel project
-[https://github.com/gray-television/laravel-package-g-authentication].
+5. Add middleware and update telescopeServiceProdvider(For production use.)
+```
+Middleware
+-----------------
+Add TelescopeMiddleware.php to app/Http/Middleware directory
+Add TelescopeServiceProvider.php to app/Providers directory
+Update config/telescope.php:
 
-5. Add installtion files to integrate template with laravel
+    'middleware' => [
+        'web',
+        Authorize::class,
+    ],
+    
+    TO
+    
+    'middleware' => [
+      'web',
+      TelescopeMiddleware::class
+    ],
+```
+
+6. Add installtion files to integrate template with laravel
 
 ```
 Replace tailwind.config.js in root(/) with template verison
@@ -65,6 +85,7 @@ Add web.php to routes(root) directory
 
 run "npm run dev"
 
+php artisan serve
 ```
 ## Notes
 * This HTML template is shipped with the (Tailwind CLI tool)[https://tailwindcss.com/docs/installation].
