@@ -71,13 +71,15 @@ Add banner.php, header.php, sidebar.php to app/View/Components directory
 
 Add img folder to public directory(/)
 
+Add DashboardController.php to app/Http/Controllers directory
+
 Add custom-sweet-alerts.js to public/js directory 
 
 Replace resources/css folder with provided "css" folder
 
 Add layout.blade.php file to resources/views directory
 
-Add index.blade.php file to resources/views directory
+Add index.blade.php file to resources/views/dashboard directory
 
 Add header.blade.php, sidebar.blade.php, and banner.blade.php to resources/views/components directory
 
