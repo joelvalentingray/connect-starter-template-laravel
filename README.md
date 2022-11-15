@@ -53,7 +53,7 @@ php artisan migrate
 Middleware
 -----------------
 Add TelescopeMiddleware.php to app/Http/Middleware directory
-Add TelescopeServiceProvider.php to app/Providers directory
+Replace TelescopeServiceProvider.php provided file to app/Providers directory
 Update config/telescope.php:
 
     'middleware' => [
@@ -72,9 +72,9 @@ Update config/telescope.php:
 ##### 7. Add installtion files to integrate template with laravel
 
 ```
-Replace tailwind.config.js in root(/) with template verison
+Add tailwind.config.js in root(/) with template verison
 
-Add banner.php, header.php, sidebar.php to app/View/Components directory
+Add View directory to app/ directory
 
 Add img folder to public directory(/)
 
