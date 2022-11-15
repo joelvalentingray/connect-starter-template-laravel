@@ -8,7 +8,7 @@ This is a template that can be used by developers to integrate a laravel project
 
 ## Setup
 
-1. Install Laravel via composer
+##### 1. Install Laravel via composer
 ```
 open terminal 
 cd Desktop
@@ -17,7 +17,7 @@ Open new project in your preferred IDE
 
 ```
 
-2. Add Sqllite Test DB
+##### 2. Add Sqllite Test DB
 ```
 The database is setup by default to use sqlite on local, deploy it by creating a database.sqlite file in database/ directory and add to .env(root):
 DB_CONNECTION=sqlite
@@ -26,15 +26,16 @@ DB_CONNECTION=sqlite
 # DB_DATABASE=laravel
 # DB_USERNAME=root
 # DB_PASSWORD=
-```
+
 php artisan migrate
+```
 
-3.Replace package.json file in root directory of project
+##### 3.Replace package.json file in root directory of project
 
-4. Add SSO login to laravel project
+##### 4. Add SSO login to laravel project
 [https://github.com/gray-television/laravel-package-g-authentication].
 
-5. Install laravel Telescope
+##### 5. Install laravel Telescope
 ```
 composer require laravel/telescope
 php artisan telescope:install
@@ -42,7 +43,8 @@ php artisan migrate
 
 ```
 
-6. Add middleware and update telescopeServiceProdvider(For production use.)
+##### 6. Add middleware and update telescopeServiceProdvider(For production use.)
+
 ```
 Middleware
 -----------------
@@ -63,7 +65,7 @@ Update config/telescope.php:
     ],
 ```
 
-7. Add installtion files to integrate template with laravel
+##### 7. Add installtion files to integrate template with laravel
 
 ```
 Replace tailwind.config.js in root(/) with template verison
