@@ -92,3 +92,4 @@ php artisan serve
 * View full template at [https://preview.cruip.com/mosaic/index.html]
 * Template source code [https://github.com/gray-television/mosaic-template-html]
 * Icons used by template [https://tablericons.com/]
+* SweetAlert2 Docs [https://sweetalert2.github.io/]
