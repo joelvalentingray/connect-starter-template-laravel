@@ -84,13 +84,25 @@ Add custom-sweet-alerts.js to public/js directory
 
 Replace resources/css folder with provided "css" folder
 
+Remove welcome.blade.php file from resources/views directory
+
 Add layout.blade.php file to resources/views directory
 
-Add index.blade.php file to resources/views/dashboard directory
+Create dashboard directory in resources/views directory and Add index.blade.php file to resources/views/dashboard directory
 
-Add header.blade.php, sidebar.blade.php, and banner.blade.php to resources/views/components directory
+Add components directory to resources/views directory
 
-Add web.php to routes(root) directory
+Replace web.php provided file with routes/web.php
+
+Replace webpack.mix.js provided file with webpack.mix.js(/)
+
+Add Alpine code to resources/js/app.js:
+
+    import Alpine from 'alpinejs';
+
+    window.Alpine = Alpine;
+
+    Alpine.start();
 
 run "npm run dev"
 
