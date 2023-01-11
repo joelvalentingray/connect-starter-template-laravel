@@ -2,7 +2,6 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     content: [
-        './**/*.html',
         './js/**/*.js',
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
