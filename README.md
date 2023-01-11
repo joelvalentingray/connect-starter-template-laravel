@@ -75,7 +75,7 @@ TO
 * Add *img* folder to **public directory(/)**
 * Add *DashboardController.php* to **app/Http/Controllers** directory
 * Add *custom-sweet-alerts.js* to **public/js** directory 
-* Replace **resources/css** folder with provided *"css"*folder
+* Replace **resources/css** folder with provided *css* folder
 * Remove **welcome.blade.php** file from **resources/views directory**
 * Add *layout.blade.php* file to **resources/views directory**
 * Create **dashboard** directory in **resources/views** directory and Add *index.blade.php* file to **resources/views/dashboard directory**
@@ -88,7 +88,7 @@ import Alpine from 'alpinejs';
 window.Alpine = Alpine;
 Alpine.start();
 ```
-* Run NPM watcher to automatically detect changes to Tailwind and JS
+##### 8. Run NPM watcher to automatically detect changes to Tailwind and JS
 ```
 npm run watch
 php artisan serve
